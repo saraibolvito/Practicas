@@ -6,6 +6,11 @@
     <title>heydibolvito</title>
   </head>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     #titulo {
       color: darksalmon;
     }
@@ -20,15 +25,15 @@
     #subtitulo4 {
       color: black;
     }
-     #subtitulo6 {
+    #subtitulo6 {
       color: black;
     }
 
-     #subtitulo7 {
+    #subtitulo7 {
       color: black;
     }
 
-     #subtitulo8 {
+    #subtitulo8 {
       color: black;
     }
 
@@ -54,9 +59,8 @@
       padding: 15px;
       margin: 25px;
     }
-    #info3 :nth-child(1){
-        background-color: red;
-
+    #info3 :nth-child(1) {
+      background-color: red;
     }
 
     #info4 {
@@ -73,93 +77,100 @@
       list-style-position: inside;
       padding: 25px;
       margin: 25px;
-      }
+    }
     #info6 {
       background-color: rgb(115, 241, 164);
-     
+
       list-style-position: inside;
       padding: 25px;
       margin: 25px;
-      }
-      #info7 {
+    }
+    #info7 {
       background-color: rgb(147, 83, 250);
       text-align: center;
       list-style-position: inside;
       padding: 25px;
       margin: 25px;
-      }
+    }
 
-      #info8{
+    #info8 {
       background-color: rgb(243, 79, 87);
       text-align: center;
       list-style-position: inside;
       padding: 25px;
       margin: 25px;
-      }
-      #info9 {
+    }
+    #info9 {
       background-color: rgb(248, 244, 7);
       text-align: center;
       list-style-position: inside;
       padding: 25px;
       margin: 25px;
-      }
-
-      #lista1{
-        text-align: end;
-      }
-
-      #lista2{
-        text-align: end;
-      }
-
-      #lista3{
-        text-align: end;
-      }
-
-    #lista1 :nth-child(1){
-        background-color: rgb(87, 38, 143);
-        
-
-    }
-    #lista1 :nth-child(2){
-        background-color: rgb(240, 110, 252);
-
-    }
-    #lista1 :nth-child(3){
-        background-color: rgb(238, 163, 101);
-
     }
 
-     
-    #lista2 :nth-child(1){
-        background-color: rgb(117, 238, 101);
-
-    }
-    #lista2 :nth-child(2){
-        background-color: rgb(173, 138, 20);
-
-    }
-    #lista2 :nth-child(3){
-        background-color: rgb(88, 99, 245);
-
-    }
-    
-    #lista3 :nth-child(1){
-        background-color: rgb(240, 114, 114);
-
-    }
-    #lista3 :nth-child(2){
-        background-color: rgb(106, 152, 236);
-
-    }
-    #lista3 :nth-child(3){
-        background-color: rgb(247, 204, 15);
-
+    #lista2 {
+      text-align: left;
+      padding: 25px;
+      margin: 25px;
     }
 
+    #lista3 {
+      text-align: left;
+      padding: 25px;
+      margin: 25px;
+    }
+    #lista4 {
+      background-color: rgb(93, 182, 233);
+      text-align: left;
+      list-style-position: inside;
+      padding: 0px;
+      margin: 2px;
+    }
 
+    #lista1 :nth-child(1) {
+      background-color: rgb(87, 38, 143);
+    }
+    #lista1 :nth-child(2) {
+      background-color: rgb(240, 110, 252);
+    }
+    #lista1 :nth-child(3) {
+      background-color: rgb(238, 163, 101);
+    }
 
-    
+    #lista2 :nth-child(1) {
+      background-color: rgb(117, 238, 101);
+    }
+    #lista2 :nth-child(2) {
+      background-color: rgb(173, 138, 20);
+    }
+    #lista2 :nth-child(3) {
+      background-color: rgb(88, 99, 245);
+    }
+
+    #lista3 :nth-child(1) {
+      background-color: rgb(240, 114, 114);
+    }
+    #lista3 :nth-child(2) {
+      background-color: rgb(106, 152, 236);
+    }
+    #lista3 :nth-child(3) {
+      background-color: rgb(247, 204, 15);
+    }
+
+    #lista1 {
+      text-align: left;
+      padding: 25px;
+      margin: 25px;
+    }
+    #lista1 .lista1-4 {
+      padding-left: 20px;
+      padding-top: 5px;
+    }
+
+    #lista1 .lista1-4 P {
+      background-color: red;
+    }
+
   </style>
   <body>
     <h1 id="titulo">Etiquetas</h1>
@@ -195,52 +206,76 @@
       columnas simultaneamente.
     </p>
     <div>
-      <img src="https://i.ytimg.com/vi/86H_WolxU7w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDo61VmObCxVf0iqD8O53e0xVzvXA"
+      <img
+        src="https://i.ytimg.com/vi/86H_WolxU7w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDo61VmObCxVf0iqD8O53e0xVzvXA"
         width="200"
-        height="150">
-        <h2 id="subtitulo5"> ¿Que es un pseudo elemento en CSS?</h2>
-        <p id="info5"> Un pseudo-elemento es el que permite aplicar estilos a partes especificas de un elemento HTML sin modificarlo el HTML directamente</p>
-        
-        <ul id="info6">
-      <li>:: before: insetra contenidos antes del contenido real del elemento</li>
-      <li>:: after: insertar contenidos despues del contenido real</li>
-      <li>:: first-letter: estiliza la primera letra de un bloque de texto</li>
-      <li>:: first-line: estiliza la primera linea de un bloque de texto</li>
-      <li>:: placeholder: estiliza el texto del atributo placeholder en inputs</li>
-      <li>:: selection: estiliza el texto seleccionado por el usuario</li>
-         </ul>
+        height="150"
+      />
+      <h2 id="subtitulo5">¿Que es un pseudo elemento en CSS?</h2>
+      <p id="info5">
+        Un pseudo-elemento es el que permite aplicar estilos a partes
+        especificas de un elemento HTML sin modificarlo el HTML directamente
+      </p>
+
+      <ul id="info6">
+        <li>
+          :: before: insetra contenidos antes del contenido real del elemento
+        </li>
+        <li>:: after: insertar contenidos despues del contenido real</li>
+        <li>
+          :: first-letter: estiliza la primera letra de un bloque de texto
+        </li>
+        <li>:: first-line: estiliza la primera linea de un bloque de texto</li>
+        <li>
+          :: placeholder: estiliza el texto del atributo placeholder en inputs
+        </li>
+        <li>:: selection: estiliza el texto seleccionado por el usuario</li>
+      </ul>
       <h2 id="subtitulo7">nth-child</h2>
-    <p id="info7">permite seleccionar elementos segun su pocision dentro de su elemento padre,la (n) puede ser un numero o una formula o una palabra clave</p>
-       <h2>hover</h2>
-   <p id="info8">se utiliza para aplicar estilos cuando el usuario pasa el mouse sobre el elemento como efectos interactivos,como cambiar colores,mostrar menus o animaciones</p>
-    <h2 id="subtitulo8">¿Que es el modelo de cajas en CSS?</h2>
-    <p id="info9">es todo el componente de las medidas como el de afuera de la caja y el espacio de adentro y de los bordes y el espacio fuera de los bordes </p>
-    <center>
-    <h1>Tarea</h1>
-    
-     <h2>Lista</h2>
+      <p id="info7">
+        permite seleccionar elementos segun su pocision dentro de su elemento
+        padre,la (n) puede ser un numero o una formula o una palabra clave
+      </p>
+      <h2>hover</h2>
+      <p id="info8">
+        se utiliza para aplicar estilos cuando el usuario pasa el mouse sobre el
+        elemento como efectos interactivos,como cambiar colores,mostrar menus o
+        animaciones
+      </p>
+      <h2 id="subtitulo8">¿Que es el modelo de cajas en CSS?</h2>
+      <p id="info9">
+        es todo el componente de las medidas como el de afuera de la caja y el
+        espacio de adentro y de los bordes y el espacio fuera de los bordes
+      </p>
+      <center>
+        <h1>Tarea</h1>
+
+        <h2>Lista</h2>
       </center>
 
-      <h3 id="lista1.2">Cereales</h3>
+      <h3 id="lista12">Cereales</h3>
       <div id="lista1">
-      <div>CHOCO KKRISPIS</div>
-      <div>CORN FLAKES</div>
-      <div>azucaritas</div>
-    </div>
+        <div>CHOCO KKRISPIS</div>
+        <div>CORN FLAKES</div>
+        <div>AZUCARITAS</div>
+        <div class="lista1-4">
+          <p>Avena d dfdf df df dfd fdd</p>
+          <p>A</p>
+        </div>
+      </div>
+      <h3 id="lista2.1">Frutas</h3>
+      <div id="lista2">
+        <div>Manzana</div>
+        <div>Fresa</div>
+        <div>Uva</div>
+      </div>
 
-    <h3 id="lista2.1">Frutas</h3>
-    <div id="lista2">
-      <div>Manzana</div>
-      <div>Fresa</div>
-      <div>Uva</div>
+      <h3 id="lista3.1">Verduras</h3>
+      <div id="lista3">
+        <div>Cebolla</div>
+        <div>Tomate</div>
+        <div>Repollo</div>
+      </div>
     </div>
-
-    <h3 id="lista3.1">Verduras</h3>
-    <div id="lista3">
-      <div>Cebolla</div>
-      <div>Tomate</div>
-      <div>Repollo</div>
-    </div>
-  </div>
   </body>
 </html>
