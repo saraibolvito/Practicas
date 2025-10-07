@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo5</title>
+  </head>
+  <body>
+    <h2>¿Que son los ciclos en JavaScrip</h2>
+    <p>
+      Tambien es llamado bucles, son estructuras de control que permiten
+      ejecutar un bloque de codigo repetidamente mientras se cumpla una
+      condicion, o un numero especifico de veces.
+    </p>
+    <h2>¿Que es for?</h2>
+    <p>
+      Es una estructura de control que permite ejecutar un bloque de codigo un
+      numero especifico de veces.
+    </p>
+    <h2>¿Que es while?</h2>
+    <p>
+      Es un tipo de bucle que repite un bloque de codigo miestras una condicion
+      especifica sea verdadera.
+    </p>
+    <h2>¿Como se hace un for?</h2>
+    <p>
+      Se debe usar la palabra for seguida de parenteis que contiene partes que
+      esta la inicializacion de un avariable (x = 0 ), una condicion para que el
+      bucle continue ( x < 10),el siguente paso es actualizar la variable (
+      x++), dentro de las llaves{} se coloca el codigo que se repetira en cada
+      iteracion.
+    </p>
+    for ( let i = 1; i < 10; i++) { console.log(i); }
+
+    <script>
+      for (let i = 1; i <= 10; i++) {
+        if (i >= 5 && i <= 9) {
+          console.log(i);
+        }
+      }
+
+      // ejercicio no tiene parentesis
+
+      //console.log("prueba 1");
+
+      for (let i = 1; i <= 30; i++) {
+        if (i <= 9) {
+          //console.log(i + " menor a 10 ");
+        }
+        if (i <= 19) {
+          //console.log(i + " mayor a 20 ");
+        }
+      }
+
+      //ejercio , cambia los parentesis
+
+      //console.log("prueba 2");
+
+      for (let i = 1; i <= 30; i++) {
+        let mensaje = "";
+
+        if (i <= 9) {
+          mensaje = " ( " + i + " menor 9)";
+          console.log(mensaje);
+        } else if (i <= 19) {
+          mensaje = " ( " + i + "  mayor 19)";
+          console.log(mensaje);
+        } else {
+          mensaje = " ( " + i + " mayor 30)";
+          console.log(mensaje);
+        }
+      }
+    </script>
+  </body>
+</html>

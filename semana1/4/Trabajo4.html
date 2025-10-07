@@ -93,23 +93,22 @@
       function imprimirMultiplicacionNumeros(numero1, numero2, numero3) {
          let multiplicacion = numero1 * numero2 * numero3;
 
-         if(multiplicacion > 25){
-             console.log("es mayor");
-
-         }
-
-         if(multiplicacion < 10 ){
-           console.log("es menor")
-         }
-
          if (multiplicacion === 0 ) {
             return console.log("cero")
         }
-        return console.log(multiplicacion);
+
+         if(numero1 > 25 && numero3 < 10){
+             return console.log("es mayor");
+
+         } 
+
+         return console.log("Numero 1 > 25 y Numero 3 < 10");
+
+          return console.log(multiplicacion);
 
       }
       
-      imprimirMultiplicacionNumeros(1,50,1 );
+      imprimirMultiplicacionNumeros(26,5,5 );
 
       function imrpimirDivisionNumeros(numero1, numero2) {
         let division = 0;
@@ -128,7 +127,7 @@
 
         return console.log(" Numero 1 es menor a 100");
       }
-      imrpimirDivisionNumeros(500, 5);
+      //imrpimirDivisionNumeros(500, 5);
     </script>
   </body>
 </html>
