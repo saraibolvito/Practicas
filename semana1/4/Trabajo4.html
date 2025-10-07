@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investigación</title>
+  </head>
+  <body>
+    <h2>¿Que es Java script?</h2>
+    <p>
+      Es un lenguaje de programacion que los desarrolladores utilizan para hacer
+      paguinas web interactivas. Desde actualizar fuentes de redes sociales a
+      mostrar animaciones y mapas interactivos.
+    </p>
+    <h2>¿Que es var?</h2>
+    <p>
+      Es una palabra clave para la declaracion de variables que permiten al
+      compilador o interprete inferir el tipo de datos de la variable. El
+      proposito es indicar que el texto entre la etiqueta es un identificador o
+      nombre de la variable.
+    </p>
+    <h2>¿Que es let?</h2>
+    <p>
+      Es una palabra clave para declarar variables que tienen alcance de bloque
+      y pueden ser reasignadas.
+    </p>
+    <h2>¿Que es const?</h2>
+    <p>
+      Se usa para declarar variables cuyo valores no pueden ser reasignados
+      despues de su inicializacion, y su alcance es de bloque.
+    </p>
+    <h2>¿Que son las funciones y los if?</h2>
+    <p>
+      Las funciones son un fragmento de codigo que realiza una tarea especifica
+      y puede ser llamado multiples veces como proposito o estructura
+    </p>
+    <p>
+      Los if se utilizan para controlar el flujo del programa y ejecutar codigo
+      de manera condicional.
+    </p>
+
+    <script>
+      //ejemplo
+      var nombre = "Leonel";
+      let apellido = "Dominguez";
+      console.log(nombre + " " + apellido);
+
+      //ejercicio 1
+      var marca = "CORN";
+      let cereal = "FLAKES";
+      console.log(marca + " " + cereal);
+      var mar = "FROOT";
+      let cera = "LOOPS";
+      console.log(mar + " " + cera);
+      var ma = "Choco";
+      let ce = "Krispis";
+      console.log(ma + " " + ce);
+      //ejercicio 2
+      var nombre = "Andrea";
+      let ape = "Lopéz";
+      console.log(nombre + " " + ape);
+      var nombre = "Marcos";
+      let apelli = "Chamale";
+      console.log(nombre + " " + apelli);
+      var nombre = "Yeimi";
+      let apell = "Puac";
+      console.log(nombre + " " + apell);
+      //ejemplo 3
+      let num1 = 1,
+        num2 = -2;
+      console.log(num1 + num2);
+      //ejemplo 4
+      function imprimirNombresPersonas(nombre, apellido) {
+        return console.log(nombre + "-" + apellido);
+      }
+
+      imprimirNombresPersonas("Leonel", "Dominguez");
+      imprimirNombresPersonas("Sarai", "Bolvito");
+
+      var suma = 0;
+      function imprimirSumaNumeros(numero1, numero2) {
+        suma = numero1 + numero2;
+        return console.log(suma);
+      }
+      imprimirSumaNumeros(1, 10);
+
+      function imprimirRestaNumeros(numero1, numero2) {
+        let resta = numero1 + numero2;
+        return console.log(resta);
+      }
+      imprimirRestaNumeros(15, 5);
+
+      function imprimirMultiplicacionNumeros(numero1, numero2, numero3) {
+         let multiplicacion = numero1 * numero2 * numero3;
+
+         if(multiplicacion > 25){
+             console.log("es mayor");
+
+         }
+
+         if(multiplicacion < 10 ){
+           console.log("es menor")
+         }
+
+         if (multiplicacion === 0 ) {
+            return console.log("cero")
+        }
+        return console.log(multiplicacion);
+
+      }
+      
+      imprimirMultiplicacionNumeros(1,50,1 );
+
+      function imrpimirDivisionNumeros(numero1, numero2) {
+        let division = 0;
+
+        if (numero2 == 0) {
+          return console.log("Divisor no puede ser 0");
+        }
+
+        if (numero1 > 5) {
+          if (numero1 < 100) {
+            division = numero1 / numero2;
+            return console.log(division);
+          }
+        }
+
+
+        return console.log(" Numero 1 es menor a 100");
+      }
+      imrpimirDivisionNumeros(500, 5);
+    </script>
+  </body>
+</html>
