@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semana2</title>
+</head>
+<body>
+    <h2>¿Que es el operador modulo?</h2>
+    <p>(%) es un operador matematico que devuelve el residuo o resto de una division entre dos numeros, tambien es utilizado para verificar si el numero es par o impar.</p>
+    <h2>¿Que es el operador not?</h2>
+    <p>Es un operador logico unario que invierte el valor booleano de su operador , "si es verdadero,lo vuelve falso y si es falso lo vuelve verdadero".</p>
+    <h2>Pre incremento</h2>
+    <p>Incrementa el valor de la variable y luego usa ese valor incrementado en la expresion .</p>
+    <h2>Post incremento</h2>
+    <p>Se usa el valor actual de la variable en la expresion y luego la incrementa.</p>
+    <h2>¿Que son los arreglos en JavaScrip?</h2>
+    <p>Son objetos que permiten almacenar multiples valores de cualquier tipo de dato en una sola variable, organizados en una secuencia.</p>
+    <p>Se crea usando corchetes[] y los elementos se separan por comas. se accede a cada elemento por si indice, comenzando desde 0, y su longitud se obtiene con la propiedad .length ,los arreglos son dinamicos y pueden crecer o encogerse, y cuentan con diversos metodos para manipularlos, como push () para añadir al final y pop () para quitar al final.</p>
+    <h2>¿Que es un objeto?</h2>
+    <p>Representan cosas del mundo real, asi como conceptos abstractos con sus caracteristicas y comportamientos especificos. Un objeto cuenta con su estructura interna que combina variables, funciones y estructuras de datos. </p>
+
+
+    <script>
+        //ejercicio 1
+        console.log("=== ejercicio 1 ===")
+        for (let i = 1; i <= 40; i++) {
+            if(!(i % 2 == 0)) {
+                console.log(i);
+            }
+        }
+        
+        //ejercicio 2
+         console.log("=== ejercicio 2 ===")
+         for ( let i = 0; i <=10; i ++){
+            if(i % 1 == 0) {
+                console.log(i);
+            }
+         }
+
+         //ejercicio 3
+         console.log("=== ejercicio 3 ===")
+         for ( let i =30; i >=1; --i){
+            if(i % 1 == 0) {
+                console.log(i);
+                console.log(i--);
+                console.log(--i);
+            }
+         }
+
+         //ejercicio 4
+         console.log("=== ejercicio 4 ===")
+         for ( let i =30; i >=1; i-=3) {
+            if ( i % 1 == 0) {
+                console.log(i);
+            }
+         }
+
+
+    
+    </script>
+</body>
+</html>
