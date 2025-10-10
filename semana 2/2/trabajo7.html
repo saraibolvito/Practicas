@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo7</title>
+  </head>
+  <body>
+    <h2 class="fore"></h2>
+    <p class="texto"></p>
+
+    <h2 class="map"></h2>
+    <p class="texto1"></p>
+
+    <h2 class="switch"></h2>
+    <p class="texto2"></p>
+
+    <h2 class="flecha"></h2>
+    <p class="texto3"></p>
+    
+    <h2 class="query"></h2>
+    <p class="texto4"></p>
+
+    <script>
+              //ejemplo 1 "foreach"
+              const frutas = ["manzana", "banana", "naranja"];
+
+          frutas.forEach((fruta) =>
+          console.log(fruta)// Imprime cada fruta en la consola
+          );
+
+          //ejemplo 2 "Map"
+          const numeros = [1, 2, 3, 4];
+          const dobles = numeros.map(num => num * 2); // Transforma cada número en su doble
+
+          console.log(dobles); // Salida: [2, 4, 6, 8]
+          console.log(numeros); // Salida: [1, 2, 3, 4] (El array original no cambia)
+
+
+          //ejemplo 3 "switch"
+          let dia = 4;
+      let nombreDia;
+
+      switch (dia) {
+        case 1:
+          nombreDia = "Lunes";
+          break;
+        case 2:
+          nombreDia = "Martes";
+          break;
+        case 3:
+          nombreDia = "Miércoles";
+          break;
+        case 4:
+          nombreDia = "Jueves";
+          break;
+        case 5:
+          nombreDia = "Viernes";
+          break;
+        case 6:
+          nombreDia = "Sábado";
+          break;
+        case 7:
+          nombreDia = "Domingo";
+          break;
+        default:
+          nombreDia = "Día no válido";
+      }
+
+      console.log(nombreDia);
+
+      let lista = document.querySelector(".fore")
+      lista.innerHTML ="¿Que es un foreach?"
+
+      let lista2 = document.querySelector(".map")
+      lista2.innerHTML = "¿Que es un Map?"
+
+      let lista3 = document.querySelector(".switch")
+      lista3.innerHTML = "¿Que es un switch?"
+
+      let lista4 = document.querySelector(".flecha")
+      lista4.innerHTML = "Funcion de la flecha"
+      
+      let lista5 = document.querySelector(".query")
+      lista5.innerHTML = "¿Que es queryselector?"
+
+    
+      let info = document.querySelector(".texto")
+      info.innerHTML = "estructura de programación que permite recorrer cada elemento de una colección (como un array o una lista) sin necesidad de gestionar manualmente un índice numérico"
+
+      let info1 = document.querySelector(".texto1")
+      info1.innerHTML = "Es el objeto que se refiere a almacenar datos con clave. Si es map() se refiere al transormar un arreglo"
+
+      let info2 = document.querySelector(".texto2")
+      info2.innerHTML = "Es una expresión y ejecuta el bloque de código correspondiente al valor que coincida con uno de los case (casos) especificados"
+     
+      let info3 = document.querySelector(".texto3")
+      info3.innerHTML = "Se caracteriza por el uso del signo de igual y mayor que => en lugar de la palabra clave function, las principales funciones son simplificar el codigo al permitir retornos implicitos y la omision de parentesis o llaves"
+     
+      let info4 = document.querySelector(".texto4")
+      info4.innerHTML = "es un método de JavaScript que permite seleccionar el primer elemento de un documento HTML que coincide con un selector CSS válido que se le proporcione como argumento."
+      </script>
+  </body>
+</html>
