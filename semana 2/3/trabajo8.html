@@ -1,21 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h2>tarea</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabajo 8</title>
+  </head>
+  <body>
 
-    <h1> ejercicio</h1>
+    <style>
 
-    <p>console.log(`Párrafo ${index + 1}:`, parrafo.textContent);</p>
+      .numeros li:nth-child(even) {
+        background-color:yellow;
+        color:black;
+      }
 
-    <img
-        src=https://media.istockphoto.com/id/2166773378/es/foto/autumn-on-lake-gosau-in-salzkammergut-austria.jpg?s=612x612&w=0&k=20&c=qXYzZkmV6xS6aqeJtaKlPoj-hrMXmrnJ3dWBQWY-GAI=
-        width="300"
-        height="150"
-</body>
+    </style>
+    <h2>¿Que es AppendChild?</h2>
+    <p>
+      Es un metodo en JavaScript que se utiliza para agregar un nuevo nodo como
+      el ultimo hijo de un nodo padre existente. Tambien es una funcion
+      fundamental par amanipular el DOM,permitiendo añadir elementos
+      dinamicamente a una paguina web, si el nodo que se esta agregando ya esta
+      en el documento, AppendChild lo mueve de su posicion actual a la nueva
+      ubicacion.
+    </p>
+
+    <div class="lista"></div>
+    <h3>frutas</h3>
+    <div class="fruta1"></div>
+    <div class="fruta2"></div>
+    <div class="fruta3"></div>
+    <div class="fruta4"></div>
+    <div class="fruta5"></div>
+    <div class="fruta6"></div>
+    <div class="fruta7"></div>
+    <div class="fruta8"></div>
+    <div class="fruta9"></div>
+    <div class="fruta10"></div>
+
+    <h3>verduras</h3>
+    <ol></ol>
+    <ol></ol>
+
+    <h3>Números</h3>
+    <ul class="numeros"></ul>
+
+        <script>
+      let bloqueLista = document.querySelector(".lista");
+
+      let divItem = document.createElement("div");
+      divItem.innerHTML = "Hola";
+      bloqueLista.appendChild(divItem);
+
+      //ejercicio1
+      let bloqueFruta1 = document.querySelector(".fruta1");
+
+      let divItem1 = document.createElement("div");
+      divItem1.innerHTML = "Fresa";
+      bloqueFruta1.appendChild(divItem1);
+
+      let bloqueFruta2 = document.querySelector(".fruta2");
+
+      let divItem2 = document.createElement("div");
+      divItem2.innerHTML = "Melón";
+      bloqueFruta2.appendChild(divItem2);
+
+      let bloqueFruta3 = document.querySelector(".fruta3");
+
+      let divItem3 = document.createElement("div");
+      divItem3.innerHTML = "Piña";
+      bloqueFruta3.appendChild(divItem3);
+
+      let bloqueFruta4 = document.querySelector(".fruta4");
+
+      let divItem4 = document.createElement("div");
+      divItem4.innerHTML = "Banano";
+      bloqueFruta4.appendChild(divItem4);
+
+      let bloqueFruta5 = document.querySelector(".fruta5");
+
+      let divItem5 = document.createElement("div");
+      divItem5.innerHTML = "Sandia";
+      bloqueFruta5.appendChild(divItem5);
+
+      let bloqueFruta6 = document.querySelector(".fruta6");
+
+      let divItem6 = document.createElement("div");
+      divItem6.innerHTML = "Tamarindo";
+      bloqueFruta6.appendChild(divItem6);
+
+      let bloqueFruta7 = document.querySelector(".fruta7");
+
+      let divItem7 = document.createElement("div");
+      divItem7.innerHTML = "Coco";
+      bloqueFruta7.appendChild(divItem7);
+
+      let bloqueFruta8 = document.querySelector(".fruta8");
+
+      let divItem8 = document.createElement("div");
+      divItem8.innerHTML = "Papaya";
+      bloqueFruta8.appendChild(divItem8);
+
+      let bloqueFruta9 = document.querySelector(".fruta9");
+
+      let divItem9 = document.createElement("div");
+      divItem9.innerHTML = "Mango";
+      bloqueFruta9.appendChild(divItem9);
+
+      let bloqueFruta10 = document.querySelector(".fruta10");
+
+      let divItem10 = document.createElement("div");
+      divItem10.innerHTML = "Naranja";
+      bloqueFruta10.appendChild(divItem10);
+
+      const verduras = ["pan", "papa"];
+
+      const lista = document.querySelector("ol");
+      for (let i = 0; i < verduras.length; i++) {
+        const item = document.createElement("li");
+        item.textContent = `${verduras[i]}`;
+        lista.appendChild(item);
+      }
+      const elementos = document.querySelector(".numeros");
+      
+      
+      for (let i = 1; i <=10; i++){
+       const item = document.createElement("li");
+       item.textContent = i;
+       elementos.appendChild(item);
+
+       if (i % 2 === 0) {
+        item.classList.add("par");
+       }
+      }
+
+      </script>
+  </body>
 </html>
