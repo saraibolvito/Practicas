@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+  <h1 class="titulo">꧁༒☬Formulario☬༒꧂</h1>
+  
+ <style>
+
+      
+      * {
+        margin: 65;
+        padding: 10;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #ddbdf1;
+        background-image:url(https://i.pinimg.com/736x/fb/10/41/fb10417e2ebdb945dbddf0f2f19e5483.jpg);
+      }
+
+      .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 25px;
+        text-shadow:-5px -5px 5px #fd30f3;
+      }
+
+      .titulo1 {
+        padding: 0px;
+        margin: 5px;
+      }
+
+      .info1 {
+        padding: 25px;
+        margin: 5px;
+      }
+
+      .nombre {
+        text-align: center;
+      }
+      .apellido {
+        text-align: center;
+      }
+      .telefono {
+        text-align: center;
+      }
+      .correo {
+        text-align: center;
+      }
+      .enviar {
+        background-color: #fcbbe8;
+        color: rgb(0, 0, 0);
+        border-radius: 15px;
+        }
+
+      button {
+            background: #ffc1fc;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 15px;
+        }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      input {
+        padding: 4px;
+        border-radius: 6px;
+        outline: 0;
+        border: 0;
+      }
+      
+      .text-align{
+        text-align: center;
+         padding: 10px; 
+         margin: 10px; 
+        border-radius: 15px;
+      }
+
+      </style>
+         
+         <form>
+      <div class="nombre">
+        <label for="nombre">Nombre :</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresa tu nombre"
+          
+        />
+      </div>
+
+      <div class="apellido">
+        <label for="correo">Apellido :</label>
+        <input
+          type="apellido"
+          id="apellido"
+          name="apellido"
+          placeholder="Ingresa tu apellido"
+          
+        />
+      </div>
+      <div class="telefono">
+        <label for="telefono">Telefono:</label>
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          placeholder="Ingresa tu numero"
+          
+        />
+      </div>
+
+      <div class="correo">
+        <label for="correo">Correo Electronico :</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="@correo.com"
+          />
+        </div>
+        
+      <button onclick="validarformulario(event)">Enviar</button> 
+      </form>
+      <h2 class="titulo1">¿Que es length?</h2>
+      <p class="info1">Es una propiedad de un objeto,puede usarse tanto en arrays como en cadenas,aunque la sintaxis de la funcion length es la misma solo que entre arrays y cadenas varia la interpretacion.</p>
+
+    <script>
+      function validarformulario(event) {
+        event.preventDefault();
+          
+        const nombre = document.querySelector('#nombre').value.trim();
+        const apellido = document.querySelector('#apellido').value.trim();
+        const telefono = document.querySelector('#telefono').value.trim();
+        const correo = document.querySelector('#correo').value.trim();
+
+        if (telefono.length !== 8){
+          alert('tener 8 digitos en el telefono');
+          return;
+        }
+         if (nombre && apellido && telefono && correo) {
+                document.querySelector('form').remove();
+
+               const mostrarDatos = document.createElement('div');
+            mostrarDatos.innerHTML = `
+                
+            <div style="text-a">
+                    <h2>Datos Ingresados</h2>
+                    <p><strong>Nombre Completo:</strong> ${nombre} ${apellido}</p>
+                    <p><strong>Teléfono:</strong> ${telefono}</p>
+                    <p><strong>Correo:</strong> ${correo}</p>
+                </div>
+            `;
+            document.body.appendChild(mostrarDatos);
+          }  
+          
+         else {
+        alert('Completa todos los campos');
+        }
+      }
+           
+    </script>
+</body>
+</html>

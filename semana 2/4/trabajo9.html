@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo 9</title>
+  </head>
+  <body>
+    <h1 class="titulo">꧁༒☬Formulario☬༒꧂</h1>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f9f0ff;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e6d4f7' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+
+      .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 25px;
+      }
+
+      .nombre {
+        text-align: center;
+      }
+      .apellido {
+        text-align: center;
+      }
+      .telefono {
+        text-align: center;
+      }
+      .correo {
+        text-align: center;
+      }
+
+      .titulo1 {
+        padding: 2px;
+        margin: 5px;
+      }
+
+      .info1 {
+        padding: 25px;
+        margin: 5px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      input {
+        padding: 4px 8px;
+        border-radius: 6px;
+        outline: 0;
+        border: 0;
+      }
+
+      .enviar {
+        background-color: #fcbbe8;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 10%;
+      }
+
+       button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+    </style>
+    <form>
+      <div class="nombre">
+        <label for="nombre">Nombre :</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresa tu nombre"
+          
+        />
+      </div>
+
+      <div class="apellido">
+        <label for="correo">Apellido :</label>
+        <input
+          type="apellido"
+          id="apellido"
+          name="apellido"
+          placeholder="Ingresa tu apellido"
+          
+        />
+      </div>
+      <div class="telefono">
+        <label for="telefono">Telefono:</label>
+        <input
+          type="text"
+          id="telefono"
+          id="telefono"
+          name="telefono"
+          placeholder="Ingresa tu numero"
+          
+        />
+      </div>
+
+      <div class="correo">
+        <label for="correo">Correo Electronico :</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="@correo.com"
+          />
+         
+          
+      </div>
+      <button onclick="validarformulario(event)">Enviar</button> 
+      
+    </form>
+
+    <h3 class="titulo1">
+      ¿Que son los formularios en Html y para que se usan?
+    </h3>
+    <p class="info1">
+      son secciones de un sitio web que contiene elementos interactivos como
+      campos de texto, casillas de verificacion y botones, para permitir al
+      usuario ingresar y enviar datos a un servidor web ,esto se utiliza para
+      poder recopilar informacion del usuario.
+    </p>
+    <h3 class="titulo1">¿Que son las alertas en JavaScript?</h3>
+    <p class="info1">
+      Son cuadros de dialogo que aparecen en el navegador para mostrar un
+      mensaje al usuario utilizando la funcion alert(), lo que significa que el
+      codigo posterios no se ejecuta hasta que se descarte la alerta.
+    </p>
+    <h3 class="titulo1">La funcion onclick</h3>
+    <p class="info1">
+      Es un evento que se ejecuta cuando un usuario hace clic en un elemento
+      HTML como un boton o un enlace, se puede usar para activar acciones como
+      mostrar un mensaje de alerta o dirigir a otra pagina.
+    </p>
+
+
+    <script>
+      function validarformulario(event) {
+        event.preventDefault();
+          
+        const nombre = document.querySelector('#nombre').value.trim();
+        const apellido = document.querySelector('#apellido').value.trim();
+        const telefono = document.querySelector('#telefono').value.trim();
+           if (nombre && apellido && telefono) {
+                document.querySelector('form').remove();
+            } else {
+                alert('Completa todos los campos');
+            }
+        }
+        
+        
+        
+        
+          
+    </script>
+  </body>
+</html>
