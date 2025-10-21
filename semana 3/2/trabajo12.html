@@ -1,387 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>trabajo 12</title>
     <style>
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .titulo {
-            font-size: 1.8rem;
-            text-align: center;
-            margin: 25px;
-            text-shadow: 3px 3px 5px rgb(239, 116, 255),
-                         6px 6px 5px rgb(116, 176, 255),
-                         9px 9px 5px rgb(204, 95, 247);
-        }
-        body {
-            background-color: #caa4e2;
-            background-image: url(https://i.pinimg.com/736x/61/85/16/618516eb73c984567f2a18c5f320f98c.jpg);
-            padding: 50px;
-        }
-          form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 25px;
+        text-shadow: 3px 3px 5px rgb(239, 116, 255),
+          6px 6px 5px rgb(116, 176, 255), 9px 9px 5px rgb(204, 95, 247);
+      }
+      body {
+        background-color: #caa4e2;
+        background-image: url(https://i.pinimg.com/736x/61/85/16/618516eb73c984567f2a18c5f320f98c.jpg);
+        padding: 50px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
 
-        .campo {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
+      .campo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
 
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
 
-        input {
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            outline: 0;
-        }
-         .datos-container {
-            margin-top: 20px;
-        }
+      input {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: 0;
+      }
+      .datos-container {
+        margin-top: 20px;
+      }
 
-        .datos-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .cuadro-corinto {
-            background-color: #c670ff;
-            padding: 20px;
-            border-radius: 8px;
-            color: rgb(0, 0, 0);
-        }
+      .datos-item {
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .cuadro-corinto {
+        background-color: #c670ff;
+        padding: 20px;
+        border-radius: 8px;
+        color: rgb(0, 0, 0);
+      }
 
-        .cuadro-corinto h2 {
-            color: rgb(0, 0, 0);
-            border-bottom: 2px solid rgb(0, 0, 0);
-        }
+      .cuadro-corinto h2 {
+        color: rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(0, 0, 0);
+      }
 
-        .cuadro-corinto label {
-            color: rgb(0, 0, 0);
-        }
+      .cuadro-corinto label {
+        color: rgb(0, 0, 0);
+      }
 
-        .dato {
-            margin-bottom: 15px;
-        }
+      .dato {
+        margin-bottom: 15px;
+      }
 
-        .readonly {
-            background-color: #e4e4e4;
-            color: #666;
-        }
+      .readonly {
+        background-color: #e4e4e4;
+        color: #666;
+      }
 
-        .botones {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+      .botones {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
 
-        #mensaje {
-            margin-top: 15px;
-            padding: 10px;
-            display: none;
-            border-radius: 5px;
-        }
+      #mensaje {
+        margin-top: 15px;
+        padding: 10px;
+        display: none;
+        border-radius: 5px;
+      }
 
-        .gana {
-            background-color: #fdc200;
-            color: #000000;
-            border: 1px solid #fffb00;
-        }
+      .gana {
+        background-color: #fdc200;
+        color: #000000;
+        border: 1px solid #fffb00;
+      }
 
-        .pierde {
-            background-color: #f8d7da;
-            color: #000000;
-            border: 1px solid #f5c6cb;
-        }
-         .datos-estudiante {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e6d4f0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-         .datos-estudiante h3 {
-            color: #5a2d81;
-            margin-bottom: 10px;
-        }
-        
-        .datos-estudiante p {
-            margin: 5px 0;
-        }
-        </style>
-</head>
-<body>
+      .pierde {
+        background-color: #f8d7da;
+        color: #000000;
+        border: 1px solid #f5c6cb;
+      }
+      .datos-estudiante {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e6d4f0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+      .datos-estudiante h3 {
+        color: #5a2d81;
+        margin-bottom: 10px;
+      }
+
+      .datos-estudiante p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
     <h1 class="titulo">★彡『 ɴoᴛᴀs 』彡★</h1>
-     <div class="seccion">
-        <div class="cuadro-corinto">
-            <h2>Notas del Estudiante</h2>
-            
-            <div class="dato">
-                <label for="nombreEstudiante">Nombre Completo:</label>
-                <input type="text" id="nombreEstudiante">
-            </div>
-            
-            <div class="dato">
-                <label for="carnet">Carnet:</label>
-                <input type="text" 
-                id="carnet">
-            </div>
-            
-            <div class="dato">
-                <label for="nota1">Nota 1:</label>
-                <input type="text" 
-                id="nota1" 
-                placeholder="solo números">
-            </div>
-            
-            <div class="dato">
-                <label for="nota2">Nota 2:</label>
-                <input type="text" 
-                id="nota2" 
-                placeholder="solo números" >
-            </div>
-            
-            <div class="dato">
-                <label for="nota3">Nota 3:</label>
-                <input type="text" id="nota3" placeholder="solo números">
-            </div>
+    <div class="seccion">
+      <div class="cuadro-corinto">
+        <h2>Notas del Estudiante</h2>
 
-            <div class="dato">
-                <label for="total">Total:</label>
-                <input type="text" id="total"  class="readonly" readonly >
-            </div>
-            
-            <div class="dato">
-                <label for="promedio">Promedio:</label>
-                <input type="text" id="promedio" class="readonly" readonly>
-            </div>
-            
-            <div class="resultado">
-                <label for="resultado">Resultado:</label>
-                <input type="text" id="resultado" class="readonly" readonly>
-            </div>
+        <div class="dato">
+          <label for="nombreEstudiante">Nombre Completo:</label>
+          <input type="text" id="nombreEstudiante" />
         </div>
-        
-        <div class="botones">
-            <button onclick="calcularTotal()">Calcular Total</button>
-            <button onclick="calcularPromedio()">Calcular Promedio</button>
-            <button onclick="verResultado()">Ver Resultado</button>
-             <button onclick="mostrarDatosEstudiante()">Mostrar Datos</button>
-        </div>
-        
-        <div id="mensaje"></div>
 
-         <div id="datosEstudiante" class="datos-estudiante">
-            <h3>Datos del Estudiante</h3>
-            <p><strong>Nombre:</strong> <span id="nombreMostrado"></span></p>
-            <p><strong>Resultado:</strong> <span id="resultadoMostrado"></span></p>
+        <div class="dato">
+          <label for="carnet">Carnet:</label>
+          <input type="text" id="carnet" />
         </div>
+
+        <div class="dato">
+          <label for="nota1">Nota 1:</label>
+          <input type="text" id="nota1" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="nota2">Nota 2:</label>
+          <input type="text" id="nota2" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="nota3">Nota 3:</label>
+          <input type="text" id="nota3" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="total">Total:</label>
+          <input type="text" id="total" class="readonly" readonly />
+        </div>
+
+        <div class="dato">
+          <label for="promedio">Promedio:</label>
+          <input type="text" id="promedio" class="readonly" readonly />
+        </div>
+
+        <div class="resultado">
+          <label for="resultado">Resultado:</label>
+          <input type="text" id="resultado" class="readonly" readonly />
+        </div>
+      </div>
+
+      <div class="botones">
+        <button onclick="calcularTotal()">Calcular Total</button>
+        <button onclick="calcularPromedio()">Calcular Promedio</button>
+        <button onclick="verResultado()">Ver Resultado</button>
+        <button onclick="mostrarDatosEstudiante()">Mostrar Datos</button>
+      </div>
+
+      <div id="mensaje"></div>
+
+      <div id="datosEstudiante" class="datos-estudiante">
+        <h3>Datos del Estudiante</h3>
+        <p><strong>Nombre:</strong> <span id="nombreMostrado"></span></p>
+        <p><strong>Resultado:</strong> <span id="resultadoMostrado"></span></p>
+      </div>
     </div>
-    
+
     <script>
-        function validarNotas() {
-        let dato1 = document.querySelector('#nota1').value;
-        let dato2 = document.querySelector('#nota2').value;
-        let dato3 = document.querySelector('#nota3').value;
+      function validarNotas() {
+        let dato1 = document.querySelector("#nota1").value;
+        let dato2 = document.querySelector("#nota2").value;
+        let dato3 = document.querySelector("#nota3").value;
 
-         if (dato1 === "" || dato2 === "" || dato3 === "") {
-        alert('Todas las notas deben tener un valor');
-        return false;
-    }
-
-    if (!SoloNumeros(dato1)) {
-        alert('Nota 1: Solo se permiten números');
-        return false;
-        }
-         if (!SoloNumeros(dato2)) {
-        alert('Nota 2: Solo se permiten números');
-        return false;
-    }
-
-     if (!SoloNumeros(dato3)) {
-        alert('Nota 3: Solo se permiten números');
-        return false;
-    }
-
-     let num1 = Number(dato1);
-    let num2 = Number(dato2);
-    let num3 = Number(dato3);
-    
-    if (num1 < 1 || num1 > 100) {
-        alert('Nota 1: Solo números del 1 al 100');
-        return false;
-    }
-    if (num2 < 1 || num2 > 100) {
-        alert('Nota 2: Solo números del 1 al 100');
-        return false;
-    }
-    if (num3 < 1 || num3 > 100) {
-        alert('Nota 3: Solo números del 1 al 100');
-        return false;
-    }
-    
-    return true;
-}
-
-function SoloNumeros(texto) {
-    for (let i = 0; i < texto.length; i++) {
-        let caracter = texto[i];
-        if (caracter === "0") continue;
-        if (caracter === "1") continue;
-        if (caracter === "2") continue;
-        if (caracter === "3") continue;
-        if (caracter === "4") continue;
-        if (caracter === "5") continue;
-        if (caracter === "6") continue;
-        if (caracter === "7") continue;
-        if (caracter === "8") continue;
-        if (caracter === "9") continue;
-        return false;
-    }
-    return true;
-    }
-
-    function soloNumeros(input) {
-    let valor = input.value;
-    let nuevoValor = "";
-    
-    for (let i = 0; i < valor.length; i++) {
-        let caracter = valor[i];
-        if (caracter === "0") nuevoValor += caracter;
-        if (caracter === "1") nuevoValor += caracter;
-        if (caracter === "2") nuevoValor += caracter;
-        if (caracter === "3") nuevoValor += caracter;
-        if (caracter === "4") nuevoValor += caracter;
-        if (caracter === "5") nuevoValor += caracter;
-        if (caracter === "6") nuevoValor += caracter;
-        if (caracter === "7") nuevoValor += caracter;
-        if (caracter === "8") nuevoValor += caracter;
-        if (caracter === "9") nuevoValor += caracter;
-    }
-    
-    input.value = nuevoValor;
-   }
-    function calcularTotal() {
-     if (!validarNotas()) return;
-            const nota1 = Number(document.querySelector('#nota1').value)|| 0;
-            const nota2 = Number(document.querySelector('#nota2').value)|| 0;
-            const nota3 = Number(document.querySelector('#nota3').value)|| 0;
-
-              if (!document.querySelector('#nota1').value || 
-                !document.querySelector('#nota2').value || 
-                !document.querySelector('#nota3').value) {
-                alert("Debes ingresar todas las notas");
-                return;
-            }
-            const total = nota1 + nota2 + nota3;
-            document.querySelector('#total').value = total.toFixed(2);
-              
-            
-            document.querySelector('#mensaje').style.display = 'none';
+        if (dato1 === "" || dato2 === "" || dato3 === "") {
+          alert("Todas las notas deben tener un valor");
+          return false;
         }
 
-        function calcularPromedio() {
-             if (!validarNotas()) return;
-
-            const nota1 = Number(document.querySelector('#nota1').value) || 0;
-            const nota2 = Number(document.querySelector('#nota2').value) || 0;
-            const nota3 = Number(document.querySelector('#nota3').value) || 0;
-            
-            
-            if (!document.querySelector('#nota1').value || 
-                !document.querySelector('#nota2').value || 
-                !document.querySelector('#nota3').value) {
-                alert("Debes ingresar todas las notas");
-                return;
-            }
-            
-            if (!document.querySelector('#total').value) {
-                alert("Primero debes calcular el total");
-                return;
-            }
-            const promedio = (nota1 + nota2 + nota3) / 3;
-            document.querySelector('#promedio').value = promedio.toFixed(2);
-            
-            document.querySelector('#mensaje').style.display = 'none';
+        if (!SoloNumeros(dato1)) {
+          alert("Nota 1: Solo se permiten números");
+          return false;
+        }
+        if (!SoloNumeros(dato2)) {
+          alert("Nota 2: Solo se permiten números");
+          return false;
         }
 
-        function verResultado() {
-             if (!validarNotas()) return;
-            const total = Number(document.querySelector('#total').value) || 0;
-            const promedio = Number(document.querySelector('#promedio').value) || 0;
-            
-            if (!document.querySelector('#total').value) {
-                alert("Primero debes calcular el total");
-                return;
-            }
-            
-            if (!document.querySelector('#promedio').value) {
-                alert("Debes calcular el promedio");
-                return;
-            }
-            
-            let resultado = '';
-            let mensaje = '';
-            let clase = '';
-            
-            if (promedio >= 70) {
-                resultado = 'Gana';
-                mensaje = ' Has aprobado el curso.';
-                clase = 'gana';
-            } else {
-                resultado = 'Pierde';
-                mensaje = 'No has alcanzado el promedio mínimo para aprobar.';
-                clase = 'pierde';
-            }
-            
-            document.querySelector('#resultado').value = resultado;
-            
-            const mensajeDiv = document.querySelector('#mensaje');
-            mensajeDiv.textContent = mensaje;
-            mensajeDiv.className = clase;
-            mensajeDiv.style.display = 'block';
-            }
-
-          function mostrarDatosEstudiante() {
-            const nombre = document.querySelector('#nombreEstudiante').value;
-            const resultado = document.querySelector('#resultado').value;
-            
-            if (!nombre) {
-                alert("Debes ingresar el nombre del estudiante");
-                return;
-            }
-            
-            if (!resultado) {
-                alert("Primero debes calcular el resultado");
-                return;
-            }
-            
-            document.querySelector('#nombreMostrado').textContent = nombre;
-            document.querySelector('#resultadoMostrado').textContent = resultado;
-            
-            const datosDiv = document.querySelector('#datosEstudiante');
-            datosDiv.style.display = 'block';
+        if (!SoloNumeros(dato3)) {
+          alert("Nota 3: Solo se permiten números");
+          return false;
         }
 
+        let num1 = Number(dato1);
+        let num2 = Number(dato2);
+        let num3 = Number(dato3);
 
+        if (num1 < 1 || num1 > 100) {
+          alert("Nota 1: Solo números del 1 al 100");
+          return false;
+        }
+        if (num2 < 1 || num2 > 100) {
+          alert("Nota 2: Solo números del 1 al 100");
+          return false;
+        }
+        if (num3 < 1 || num3 > 100) {
+          alert("Nota 3: Solo números del 1 al 100");
+          return false;
+        }
+
+        return true;
+      }
+
+      function SoloNumeros(texto) {
+        for (let i = 0; i < texto.length; i++) {
+          let caracter = texto[i];
+          if (caracter === "0") continue;
+          if (caracter === "1") continue;
+          if (caracter === "2") continue;
+          if (caracter === "3") continue;
+          if (caracter === "4") continue;
+          if (caracter === "5") continue;
+          if (caracter === "6") continue;
+          if (caracter === "7") continue;
+          if (caracter === "8") continue;
+          if (caracter === "9") continue;
+          return false;
+        }
+        return true;
+      }
+  
+      function calcularTotal() {
+        if (!validarNotas()) return;
+        const nota1 = Number(document.querySelector("#nota1").value) || 0;
+        const nota2 = Number(document.querySelector("#nota2").value) || 0;
+        const nota3 = Number(document.querySelector("#nota3").value) || 0;
+
+        if (
+          !document.querySelector("#nota1").value ||
+          !document.querySelector("#nota2").value ||
+          !document.querySelector("#nota3").value
+        ) {
+          alert("Debes ingresar todas las notas");
+          return;
+        }
+        const total = nota1 + nota2 + nota3;
+        document.querySelector("#total").value = total.toFixed(2);
+
+        document.querySelector("#mensaje").style.display = "none";
+      }
+
+      function calcularPromedio() {
+        if (!validarNotas()) return;
+
+        const nota1 = Number(document.querySelector("#nota1").value) || 0;
+        const nota2 = Number(document.querySelector("#nota2").value) || 0;
+        const nota3 = Number(document.querySelector("#nota3").value) || 0;
+
+        if (
+          !document.querySelector("#nota1").value ||
+          !document.querySelector("#nota2").value ||
+          !document.querySelector("#nota3").value
+        ) {
+          alert("Debes ingresar todas las notas");
+          return;
+        }
+
+        if (!document.querySelector("#total").value) {
+          alert("Primero debes calcular el total");
+          return;
+        }
+        const promedio = (nota1 + nota2 + nota3) / 3;
+        document.querySelector("#promedio").value = promedio.toFixed(2);
+
+        document.querySelector("#mensaje").style.display = "none";
+      }
+
+      function verResultado() {
+        if (!validarNotas()) return;
+        const total = Number(document.querySelector("#total").value) || 0;
+        const promedio = Number(document.querySelector("#promedio").value) || 0;
+
+        if (!document.querySelector("#total").value) {
+          alert("Primero debes calcular el total");
+          return;
+        }
+
+        if (!document.querySelector("#promedio").value) {
+          alert("Debes calcular el promedio");
+          return;
+        }
+
+        let resultado = "";
+        let mensaje = "";
+        let clase = "";
+
+        if (promedio >= 70) {
+          resultado = "Gana";
+          mensaje = " Has aprobado el curso.";
+          clase = "gana";
+        } else {
+          resultado = "Pierde";
+          mensaje = "No has alcanzado el promedio mínimo para aprobar.";
+          clase = "pierde";
+        }
+
+        document.querySelector("#resultado").value = resultado;
+
+        const mensajeDiv = document.querySelector("#mensaje");
+        mensajeDiv.textContent = mensaje;
+        mensajeDiv.className = clase;
+        mensajeDiv.style.display = "block";
+      }
+
+      function mostrarDatosEstudiante() {
+        const nombre = document.querySelector("#nombreEstudiante").value;
+        const resultado = document.querySelector("#resultado").value;
+
+        if (!nombre) {
+          alert("Debes ingresar el nombre del estudiante");
+          return;
+        }
+
+        if (!resultado) {
+          alert("Primero debes calcular el resultado");
+          return;
+        }
+
+        document.querySelector("#nombreMostrado").textContent = nombre;
+        document.querySelector("#resultadoMostrado").textContent = resultado;
+
+        const datosDiv = document.querySelector("#datosEstudiante");
+        datosDiv.style.display = "block";
+      }
     </script>
-
-    
-</body>
+  </body>
 </html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo 13</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 25px;
+        text-shadow: 3px 3px 5px rgb(158, 241, 165),
+          6px 6px 5px rgb(255, 237, 73), 9px 9px 5px rgb(236, 190, 130);
+      }
+      .titulo1 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 25px;
+      }
+      body {
+        background-color: #09855b;
+        background-image: url(https://i.pinimg.com/736x/60/4c/91/604c919b86f9ef960fd2e17db5dadc2d.jpg);
+        padding: 50px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .campo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: 0;
+      }
+      .datos-container {
+        margin-top: 20px;
+      }
+
+      .datos-item {
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .cuadro-corinto {
+        background-color: #ffb070;
+        padding: 20px;
+        border-radius: 8px;
+        color: rgb(0, 0, 0);
+      }
+
+      .cuadro-corinto h2 {
+        color: rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(0, 0, 0);
+      }
+
+      .cuadro-corinto label {
+        color: rgb(0, 0, 0);
+      }
+
+      .dato {
+        margin-bottom: 15px;
+      }
+
+      .readonly {
+        background-color: #e4e4e4;
+        color: #666;
+      }
+
+      .botones {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      #mensaje {
+        margin-top: 15px;
+        padding: 10px;
+        display: none;
+        border-radius: 5px;
+      }
+
+      .gana {
+        color: #000000;
+        border: 1px solid #000000;
+      }
+
+      .pierde {
+        color: #000000;
+        border: 1px solid #000000;
+      }
+       .datos-estudiante {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e6d4f0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+      .datos-estudiante h3 {
+        color: #5a2d81;
+        margin-bottom: 10px;
+      }
+
+      .datos-estudiante p {
+        margin: 5px 0;
+      }
+      
+      
+      .lista-estudiantes h3 {
+        color: #5a2d81;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+        .estudiante-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        background-color: #f5f5f5;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    
+      .estudiante-nombre {
+        font-weight: bold;
+      }
+      
+      .estudiante-resultado {
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+       .aprobado {
+        background-color: #d4edda;
+        color: #000000;
+      }
+      
+      .reprobado {
+        background-color: #f8d7da;
+        color: #000000;
+      }
+      .historial-nombres {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e6f7ff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .historial-nombres h3 {
+        color: #0066cc;
+        margin-bottom: 10px;
+      }
+      
+      .nombre-item {
+        padding: 5px;
+        margin: 5px 0;
+        background-color: white;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .ganastes {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      
+      .pierde {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+      </style>
+  </head>
+  <body>
+    <h2 class="titulo1">onChange</h2>
+    <p>
+      Se utiliza para ejecutar codigo en JavaScript en respuesta de una
+      modificacion del usuario,lo que permite validar datos o actualizar
+      interfaz de forma dinamica una vez que el usuario ha terminado de editar
+      un campo.
+    </p>
+    <h1 class="titulo">❤꧁ღ⊱♥ Notas ♥⊱ღ꧂❤</h1>
+    <div class="seccion">
+      <div class="cuadro-corinto">
+        <h2>Notas del Estudiante</h2>
+
+        <div class="dato">
+          <label for="nombreEstudiante">Nombre Completo:</label>
+          <input type="text" id="nombreEstudiante" />
+        </div>
+
+        <div class="dato">
+          <label for="carnet">Carnet:</label>
+          <input type="text" id="carnet" />
+        </div>
+
+        <div class="dato">
+          <label for="nota1">Nota 1:</label>
+          <input type="text" id="nota1" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="nota2">Nota 2:</label>
+          <input type="text" id="nota2" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="nota3">Nota 3:</label>
+          <input type="text" id="nota3" placeholder="solo números" />
+        </div>
+
+        <div class="dato">
+          <label for="total">Total:</label>
+          <input type="text" id="total" class="readonly" readonly />
+        </div>
+
+        <div class="dato">
+          <label for="promedio">Promedio:</label>
+          <input type="text" id="promedio" class="readonly" readonly />
+        </div>
+
+        <div class="resultado">
+          <label for="resultado">Resultado:</label>
+          <input type="text" id="resultado" class="readonly" readonly />
+        </div>
+      </div>
+
+      <div class="botones">
+       
+        <button onclick="verResultado()">Ver Resultado</button>
+        <button onclick="mostrarDatosEstudiante()">Mostrar Datos</button>
+      </div>
+
+      <div id="mensaje"></div>
+
+      
+
+      <div id="datosEstudiante" class="datos-estudiante">
+        <h3>Datos del Estudiante</h3>
+        <p><strong>Nombre:</strong> <span id="nombreMostrado"></span></p>
+        <p><strong>Resultado:</strong> <span id="resultadoMostrado"></span></p>
+      </div>
+    </div>
+
+    <div class="historial-nombres">
+        <h3>Historial de Nombres</h3>
+        <div id="historialNombres">
+        
+           </div>
+      </div>
+    
+        <div class="lista-estudiantes">
+        <h3>Lista de Estudiantes</h3>
+        <div id="listaEstudiantesContainer">
+        </div>
+    </div>
+<script>
+      let historialNombresResultados = [];
+
+      function mostrarHistorialNombres() {
+        let container = document.getElementById('historialNombres');
+        container.innerHTML = '';
+        
+        if (historialNombresResultados.length === 0) {
+          container.innerHTML = '<p>No hay nombres y resultados guardados.</p>';
+          return;
+        }
+        
+        historialNombresResultados.forEach(item => {
+          let elemento = document.createElement('div');
+          elemento.className = 'nombre-item';
+          
+          let nombreSpan = document.createElement('span');
+          nombreSpan.textContent = `Nombre: ${item.nombre}`;
+          
+          let resultadoSpan = document.createElement('span');
+          resultadoSpan.textContent = `Resultado: ${item.resultado}`;
+          resultadoSpan.className = item.resultado === 'aprobado' ? 'aprobado' : 'reprobado';
+          
+          elemento.appendChild(nombreSpan);
+          elemento.appendChild(resultadoSpan);
+          container.appendChild(elemento);
+        });
+      }
+      document.getElementById('nombreEstudiante').addEventListener('change', function() {
+        let nombreAnterior = this.getAttribute('data-valor-anterior') || '';
+        let nuevoNombre = this.value;
+
+        if (nombreAnterior && nombreAnterior !== nuevoNombre) {
+         
+          let resultadoActual = document.querySelector("#resultado").value;
+          if (resultadoActual) {
+            historialNombresResultados.push({
+              nombre: nombreAnterior,
+              resultado: resultadoActual
+            });
+            mostrarHistorialNombres();
+          }
+        }
+        this.setAttribute('data-valor-anterior', nuevoNombre);
+      });
+
+      
+       var tieneCambios = false;
+      var nota1Valida = false;
+      let inputNota1 = document.querySelector("#nota1");
+
+      inputNota1.addEventListener("change", (e) => {
+        let num1 = parseInt(e.target.value);
+        tieneCambios = true;
+        if (num1) {
+          nota1Valida = true;
+        }
+      });
+
+      var tienecambios = false;
+      var nota2Valida = false;
+      let inputNota2 = document.querySelector("#nota2");
+
+      inputNota2.addEventListener("change", (e) => {
+        let num2 = parseInt(e.target.value);
+        tienecambios = true;
+        if (num2) {
+          nota2Valida = true;
+        }
+      });
+
+      var tienecambios = false;
+      var nota3Valida = false;
+      let inputNota3 = document.querySelector("#nota3");
+
+      inputNota3.addEventListener("change", (e) => {
+        let num3 = parseInt(e.target.value);
+        tienecambios = true;
+        if (num3) {
+          nota3Valida = true;
+        }
+      });
+
+      function calcularTotal() {
+        let nota1 = parseInt(inputNota1.value) || 0;
+        let nota2 = parseInt(inputNota2.value) || 0;
+        let nota3 = parseInt(inputNota3.value) || 0;
+        let suma = nota1 + nota2 + nota3;
+        document.querySelector("#total").value = suma;
+      }
+
+      function calcularPromedio() {
+        calcularTotal();
+        let totalSuma = document.querySelector("#total").value;
+        let promedio = totalSuma / 3;
+        document.querySelector("#promedio").value = promedio.toFixed(2);
+      }
+
+      function verResultado() {
+        calcularPromedio();
+        let promedio = parseFloat(document.querySelector("#promedio").value);
+        let resultadoInput = document.querySelector("#resultado");
+        let mensajeDiv = document.querySelector("#mensaje");
+      
+        if (promedio >= 70) {
+          resultadoInput.value = "aprobado";
+          mensajeDiv.textContent = "Has aprobado.";
+          mensajeDiv.className = "ganastes";
+        } else {
+          resultadoInput.value = "reprobado";
+          mensajeDiv.textContent = " has reprobado.";
+          mensajeDiv.className = "pierde";
+        }
+        mensajeDiv.style.display = "block"
+        }
+
+        function mostrarDatosEstudiante() {
+        
+        
+        let nombre = document.querySelector("#nombreEstudiante").value;
+        let resultado = document.querySelector("#resultado").value;
+        
+      
+        
+         if (nombre && resultado ) {
+            let estudianteDiv = document.createElement("div");
+          estudianteDiv.className = "estudiante-item " + resultado;
+          
+          estudianteDiv.innerHTML = `
+            <span class="estudiante-nombre">${nombre}</span>
+            <span class="estudiante-resultado">${resultado}</span>
+          `;   
+
+           document.querySelector("#listaEstudiantesContainer").appendChild(estudianteDiv);
+
+        document.querySelector("#nombreEstudiante").value = "";
+          document.querySelector("#carnet").value = "";
+          document.querySelector("#nota1").value = "";
+          document.querySelector("#nota2").value = "";
+          document.querySelector("#nota3").value = "";
+          document.querySelector("#total").value = "";
+          document.querySelector("#promedio").value = "";
+          document.querySelector("#resultado").value = "";
+          document.querySelector("#mensaje").style.display = "none";
+           } 
+        }
+      </script>
+  </body>
+</html>
