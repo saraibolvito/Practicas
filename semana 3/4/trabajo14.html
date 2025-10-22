@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo 14</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background-color: #faade0;
+        background-image: url(https://i.pinimg.com/736x/51/95/8d/51958daf1134661c8352989348d7db4f.jpg);
+        padding: 50px;
+        position: relative;
+      }
+      .img1 {
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 200px;
+        position: fixed;
+        animation: moverDiagonal1 2s forwards;
+      }
+      .img2 {
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 200px;
+        position: fixed;
+         animation: moverDiagonal2 2s forwards;
+      
+      }
+      .caja {
+        position: relative;
+      }
+       @keyframes moverDiagonal1 {
+        from { 
+          top: 0;
+          left: 0; 
+        }
+        to { 
+          top: calc(100% - 200px);
+          left: calc(100% - 300px); 
+        }
+      }
+        @keyframes moverDiagonal2 {
+        from { 
+          top: 0;
+          right: 0; 
+        }
+        to { 
+          top: calc(100% - 200px);
+          right: calc(100% - 300px); 
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>¿Que es after y before en css</h2>
+    <p>
+      ::before y ::after son pseudoelementos en CSS que permiten crear y
+      estilizar contenido antes o después del contenido de un elemento HTML, sin
+      necesidad de añadir más etiquetas en el HTML.
+    </p>
+    <h2>¿Que son los keyframes</h2>
+    <p>
+      son puntos de referencia en una línea de tiempo que marcan un cambio en
+      una propiedad de un objeto animado, como su posición, escala, opacidad o
+      rotación.
+    </p>
+    <h2>¿Que son los pseudo elementos?</h2>
+    <p>
+      son palabras clave que se añaden a los selectores CSS para aplicar estilo
+      a partes específicas de un elemento que no están en el marcado HTML, como
+      la primera línea de un párrafo (::first-line), la primera letra
+      (::first-letter), o contenido generado antes o después de un elemento
+      (::before, ::after). Su sintaxis utiliza doble dos puntos (::) y son
+      diferentes de las pseudoclases, que se aplican a un elemento según su
+      estado (como :active).
+    </p>
+    <h2>¿Para que sirven las propiedades top,bottom,left,right</h2>
+    <p>
+      Sirven para mover un elemento al desplazarlo respecto a su posicion normal
+      o a su bloque contenedor, top y bottom:controlan la posicion
+      vertical,mientras que left y right: la posicion horizontal.
+    </p>
+    <h2>¿Que es absolute,relative,fixed,z-index?</h2>
+    <p>
+      Son propiedades de css que cambian la forma en que un elemento se
+      posiciona en la pagina
+    </p>
+    <p>
+      relative: Mueve el elemento respecto a su posición original en el flujo
+      normal del documento. Conserva el espacio que ocupaba, aunque se mueva
+      visualmente usando top, right, bottom, o left.
+    </p>
+    <p>
+      absolute: Saca al elemento del flujo normal del documento y lo posiciona
+      con respecto a su ancestro posicionado más cercano (un elemento con
+      position: relative, absolute, fixed o sticky). Si no hay un ancestro
+      posicionado, se posiciona respecto al viewport.
+    </p>
+    <p>
+      fixed: Saca al elemento del flujo normal y lo fija en la ventana del
+      navegador, por lo que permanece en su lugar incluso cuando se desplaza la
+      página.
+    </p>
+    <p>
+      z-index:Determina el orden en que los elementos se apilan en el eje Z
+      (profundidad), es decir, cuál elemento aparece encima de otro.
+    </p>
+    <div>
+      <img
+        src="https://i.pinimg.com/736x/51/b4/8b/51b48bcdbac7ad7ff951d8ff655fb3c7.jpg"
+        width="200"
+        height="150"
+        class="img1"
+      />
+    </div>
+    <div class="caja">
+      <img
+        src="https://i.pinimg.com/1200x/61/e3/42/61e34298966e43a24635f3c8a7f9dbae.jpg"
+        width="200"
+        height="150"
+        class="img2"
+      />
+    </div>
+  </body>
+</html>
