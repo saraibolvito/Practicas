@@ -19,45 +19,39 @@
       }
       .img1 {
         top: 0;
-        left: 0;
+        left: calc(50% - 200px);
         width: 300px;
         height: 200px;
         position: fixed;
-        animation: moverDiagonal1 2s forwards;
+        animation: moverVertical1 2s forwards;
       }
       .img2 {
-        top: 0;
-        right: 0;
+        top: calc(50% - 150px);
+        right: 0%;
         width: 300px;
         height: 200px;
         position: fixed;
-         animation: moverDiagonal2 2s forwards;
-      
+        animation: moverDiagonal2 2s forwards;
       }
       .caja {
         position: relative;
       }
-       @keyframes moverDiagonal1 {
-        from { 
+      @keyframes moverVertical1 {
+        from {
           top: 0;
-          left: 0; 
         }
-        to { 
+        to {
           top: calc(100% - 200px);
-          left: calc(100% - 300px); 
         }
       }
-        @keyframes moverDiagonal2 {
-        from { 
-          top: 0;
-          right: 0; 
+      @keyframes moverDiagonal2 {
+        from {
+          right: 0;
         }
-        to { 
-          top: calc(100% - 200px);
-          right: calc(100% - 300px); 
+        to {
+          right: calc(100% - 290px );
         }
       }
-
     </style>
   </head>
   <body>
@@ -130,5 +124,12 @@
         class="img2"
       />
     </div>
+    <script>
+      var numero = 1;
+      while (numero < 11) {
+        console.log(" - " + numero);
+        numero++;
+      }
+    </script>
   </body>
 </html>

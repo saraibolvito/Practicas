@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trabajo 15</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        position: relative;
+      }
+      .img1 {
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        animation: movimiento1 5s forwards;
+        
+      }
+
+      .img2 {
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+
+        animation: movimiento2 5s forwards;
+        }
+      @keyframes movimiento1 {
+        0% {
+          top: 0;
+          left: 0;
+          
+         }
+        25% {
+          top: calc((100% / 2) - 50px);
+          left: 0;
+         
+        }
+        50% {
+          top: calc((100% / 2) - 50px);
+          left: calc((100% / 2) - 75px);
+        }
+        75% {
+          top: calc(100% - 100px);
+          left: calc((100% / 2) - 75px);
+         }
+        100% {
+          top: calc(100% - 100px);
+          left: calc(100% - 150px);
+          
+        }
+      }
+      @keyframes movimiento2 {
+        0% {
+          top: 0;
+          right: 0;
+          
+        }
+        25% {
+          top: calc((100% / 2) - 50px);
+          right: 0;
+          
+        }
+        50% {
+          top: calc((100% / 2) - 50px);
+          right: calc((100% / 2) - 75px);
+          
+         
+        }
+        75% {
+          top: calc(100% - 100px);
+          right: calc((100% / 2) - 75px);
+          
+         
+        }
+        100% {
+          top: calc(100% - 100px);
+          right: calc(100% - 150px);
+          
+          
+        }
+      }
+      
+      </style>
+  </head>
+  <body>
+    <h2>La funcion animation y transition</h2>
+    <p>
+      Las animaciones son efectos de movimiento o cambios visuales aplicados a
+      elementos individuales dentro de una diapositiva o pantalla, mientras que
+      las transiciones son efectos que se usan al pasar de una diapositiva o
+      estado a otro.
+    </p>
+    <img
+      src="https://i.pinimg.com/736x/fa/64/02/fa64026bbff4e43449fbf05f26728a37.jpg"
+      width="150"
+      height="100"
+      class="img1"
+      alt="Imagen 1"
+    />
+
+    <img
+    src="https://i.pinimg.com/736x/16/2b/de/162bded4aa3030e7c286fda8f142dfe3.jpg"
+    width="150"
+    height="100"
+    class="img2"
+    alt="Imagen 2"
+    />
+  </body>
+</html>
